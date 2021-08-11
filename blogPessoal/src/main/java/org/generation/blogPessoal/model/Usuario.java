@@ -12,23 +12,19 @@ import com.sun.istack.NotNull;
 @Entity
 @Table(name = "tb_usuario")
 public class Usuario {
-    
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	
+
 	@NotNull
 	@Size(min = 2, max = 100)
 	private String nome;
-	
-	@NotNull
-	@Size(min = 5, max = 100)
-	private String email;
-	
+
 	@NotNull
 	@Size(min = 5, max = 100)
 	private String usuario;
-	
+
 	@NotNull
 	@Size(min = 5, max = 100)
 	private String senha;
@@ -49,14 +45,6 @@ public class Usuario {
 		this.nome = nome;
 	}
 
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
 	public String getUsuario() {
 		return usuario;
 	}
@@ -71,8 +59,6 @@ public class Usuario {
 
 	public void setSenha(String senha) {
 		this.senha = senha;
-	} 
-	
-	
-	
+	}
+
 }
